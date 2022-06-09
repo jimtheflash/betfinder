@@ -1,8 +1,0 @@
-{
-  "nba_schedule_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/nba_schedules/"],
-  "nba_fpts_proj_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/02_curated/nba_first_to_score/output_fpts.csv"],
-  "nba_ftts_proj_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/02_curated/nba_first_to_score/output_ftts.csv"],
-  "nba_rosters_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/02_curated/nba_rosters/current.csv"],
-  "nba_lineups_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/02_curated/nba_lineups/rotowire.csv"],
-  "nfl_rosters_path":["https://raw.githubusercontent.com/jimtheflash/gambling_stuff/main/data/02_curated/nfl_rosters/current.csv"]
-}

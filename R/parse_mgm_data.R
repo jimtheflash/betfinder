@@ -4,22 +4,22 @@ parse_mgm_data <- function(mgm_data, sport, prop = FALSE, game_lines = FALSE) {
   output_list <- list()
   for (e in 1:length(mgm_data)) {
     # subset the game event
-
     game_event <- mgm_data[[e]]$fixture
     matchup <- paste(game_event$participants$name.value, collapse = ' @ ')
     tipoff <- game_event$startDate
-    # get the game lines if you're trying to do that
-    if (game_lines == TRUE) {
-      gl_out <- parse_mgm_main(game_event = game_event, matchup = matchup, tipoff = tipoff)
-      output_list[[length(output_list) + 1]] <-
-        parse_mgm_main(game_event = game_event, matchup = matchup, tipoff = tipoff)
-      next
-    }
+    # # get the game lines if you're trying to do that
+    # if (game_lines == TRUE) {
+    #   gl_out <- parse_mgm_main(game_event = game_event, matchup = matchup, tipoff = tipoff)
+    #   output_list[[length(output_list) + 1]] <-
+    #     parse_mgm_main(game_event = game_event, matchup = matchup, tipoff = tipoff)
+    #   next
+    # }
     # extract correct props
     if (prop %in% c('first team to score', 'ftts')) {
       output_list[[length(output_list) + 1]] <-
         parse_mgm_prop(game_event = game_event, prop_name = "Next Team to Score - at Score 0-0",
                       matchup = matchup, tipoff = tipoff)
+      next
     }
     if (prop %in% c('first player to score', 'fpts')) {
       output_list[[length(output_list) + 1]] <-
